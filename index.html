@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOHD ADIL</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a192f;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+        }
+
+        .navbar a {
+            color: #64ffda;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 400;
+        }
+
+        .navbar a:hover {
+            color: #fff;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin-top: 50px;
+        }
+
+        .content {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .content h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 0;
+            background: linear-gradient(45deg, #64ffda, #ff6347, #00bfff, #ff1493);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: slideColorChange 5s ease infinite;
+        }
+
+        .content h2 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #64ffda;
+            margin: 10px 0;
+        }
+
+        .content p {
+            font-size: 16px;
+            font-weight: 300;
+            color: #8892b0;
+            margin: 20px 0;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .buttons a {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .buttons .hire-me {
+            background-color: #64ffda;
+            color: #0a192f;
+        }
+
+        .buttons .lets-talk {
+            border: 2px solid #64ffda;
+            color: #64ffda;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .social-icons a {
+            color: #64ffda;
+            font-size: 24px;
+        }
+
+        .profile-image {
+            margin-left: 50px;
+            animation: zoomInOut 5s infinite alternate;
+        }
+
+        .profile-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            transition: transform 0.5s ease;
+        }
+
+        /* Animation for Zoom In and Zoom Out */
+        @keyframes zoomInOut {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Animation for Sliding Text Color Change */
+        @keyframes slideColorChange {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Home Section -->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">ADIL.</a>
+            </div>
+            <div class="nav-links">
+                <a href="main.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="education.html">Education</a>
+                <a href="skill.html">Skills</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content">
+                <h1>Hi, I'm MOHD ADIL</h1>
+                <h2>Frontend Developer</h2>
+                <p>
+                    I’m a Frontend Developer with experience building websites and apps. I use HTML, CSS, and JavaScript to create responsive, user-friendly designs. I’m focused on making sure everything looks great and works smoothly for users.
+                </p>
+                <div class="buttons">
+                    <a class="hire-me" href="#">Hire Me</a>
+                    <a class="lets-talk" href="#">Let's Talk</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/mohd-adil-ansari-/?originalSubdomain=in"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/md.adil_02?igsh=YW4ya216MzhpYmNx"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="profile-image">
+                <img alt="Profile image of Jacob Aiden with blue face paint" src="image/ad-removebg-preview.jpg"/>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    
+</script>
+</html>
