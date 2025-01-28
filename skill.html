@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Section with Navbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a192f;
+            color: #fff;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+         /* General Reset */
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #0a192f;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .navbar a {
+            color: #64ffda;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 400;
+            font-size: 18px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        /* Adding padding to the top to ensure content is not hidden under navbar */
+        .content {
+            padding-top: 80px;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            text-align: center;
+            padding: 50px 0;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        .skills-container h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #00bfff;
+            animation: slideIn 1s ease-out;
+        }
+
+        .skills-container h1 span {
+            color: #64ffda;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .skills-section {
+            background-color: #112240;
+            padding: 30px;
+            border-radius: 12px;
+            width: 300px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skills-section:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .skills-section h2 {
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: #64ffda;
+        }
+
+        .skill {
+            margin-bottom: 20px;
+        }
+
+        .skill p {
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+        .progress-bar {
+            background-color: #233554;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 10px;
+            margin-top: 8px;
+            width: 100%;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: #00bfff;
+            width: 0%;
+            animation: fillProgress 2s ease-out forwards;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fillProgress {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: var(--progress-width);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">ADIL.</a>
+        </div>
+        <div class="nav-links">
+            <a href="main.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="education.html">Education</a>
+                <a href="skill.html">Skills</a>
+                <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Content Section (with padding to avoid navbar overlap) -->
+    <div class="content">
+        <!-- Skills Section -->
+        <div class="skills-container">
+            <h1>My <span>Skills</span></h1>
+            <div class="skills">
+                <div class="skills-section">
+                    <h2>Coding Skills</h2>
+                    <div class="skill">
+                        <p>HTML <span>90%</span></p>
+                        <div class="progress-bar">
+                            <div class="progress" style="--progress-width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>CSS <span>80%</span></p>
+                        <div class="progress-bar">
+                            <div class="progress" style="--progress-width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>JavaScript <span>65%</span></p>
+                        <div class="progress-bar">
+                            <div class="progress" style="--progress-width: 65%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Python <span>75%</span></p>
+                        <div class="progress-bar">
+                            <div class="progress" style="--progress-width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-section">
+                    <h2>Professional Skills</h2>
+                    <div class="skill">
+                        <p>Web Design <span>25%</span></p>
+                        <div class="progress-bar">
+                            <div class="progress" style="--progress-width: 25%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Web Development <span>20%</span></p>
+                        <div class="progress-bar">
+                            <div class="progress" style="--progress-width: 20%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Graphic Design <span>1%</span></p>
+                        <div class="progress-bar">
+                            <div class="progress" style="--progress-width: 1%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>SEO Marketing <span>1%</span></p>
+                        <div class="progress-bar">
+                            <div class="progress" style="--progress-width: 1%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to trigger progress bar animations on page load
+        window.addEventListener('load', function () {
+            const progressBars = document.querySelectorAll('.progress');
+            progressBars.forEach(progressBar => {
+                progressBar.style.width = progressBar.style.getPropertyValue('--progress-width');
+            });
+        });
+    </script>
+</body>
+</html>
