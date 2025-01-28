@@ -48,11 +48,14 @@
             align-items: center;
             max-width: 1200px;
             margin-top: 50px;
+            flex-wrap: wrap;
+            padding: 0 20px;
         }
 
         .content {
             max-width: 600px;
             text-align: left;
+            margin-bottom: 30px;
         }
 
         .content h1 {
@@ -117,6 +120,8 @@
         .profile-image {
             margin-left: 50px;
             animation: zoomInOut 5s infinite alternate;
+            max-width: 100%;
+            flex-grow: 1;
         }
 
         .profile-image img {
@@ -152,6 +157,73 @@
             }
         }
 
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 10px 20px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar .logo {
+                margin-bottom: 10px;
+            }
+
+            .main-content {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+            .content h1 {
+                font-size: 36px;
+            }
+
+            .content h2 {
+                font-size: 24px;
+            }
+
+            .content p {
+                font-size: 14px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .profile-image {
+                margin-left: 0;
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content h1 {
+                font-size: 28px;
+            }
+
+            .content h2 {
+                font-size: 20px;
+            }
+
+            .content p {
+                font-size: 12px;
+            }
+
+            .buttons a {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+
+            .social-icons a {
+                font-size: 20px;
+            }
+
+            .profile-image img {
+                max-width: 300px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -162,7 +234,7 @@
                 <a href="#">ADIL.</a>
             </div>
             <div class="nav-links">
-                <a href="index.html">Home</a>
+                <a href="main.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="education.html">Education</a>
                 <a href="skill.html">Skills</a>
@@ -188,7 +260,7 @@
                 </div>
             </div>
             <div class="profile-image">
-                <img alt="Profile image of Jacob Aiden with blue face paint" src="ad-removebg-preview.jpg"/>
+                <img alt="Profile image " src="ad-removebg-preview.jpg"/>
             </div>
         </div>
     </div>
