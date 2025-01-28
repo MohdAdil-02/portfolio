@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background: linear-gradient(45deg, #0a192f, #00bfff, #64ffda);
+            background-size: 400% 400%;
+            animation: gradientBackground 8s ease infinite;
+        }
+
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #0a192f;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a {
+            color: #64ffda;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 400;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #fff;
+        }
+
+        .logo a {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #64ffda;
+            transition: color 0.3s ease;
+        }
+
+        .logo a:hover {
+            color: #fff;
+        }
+
+        /* Main Content (Contact Form) */
+        .container {
+            margin-top: 100px; /* To make space for the fixed navbar */
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .contact-form {
+            background-color: #112240;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.6);
+            width: 70%;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: slideUp 1s forwards;
+        }
+
+        .contact-form h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #64ffda;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .contact-form h1 span {
+            color: #00bfff;
+        }
+
+        .contact-form .form-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            animation: fadeInUp 1s ease-in-out;
+            animation-delay: 0.5s;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px solid #00bfff;
+            border-radius: 5px;
+            background-color: #0a192f;
+            color: #fff;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #64ffda;
+            outline: none;
+        }
+
+        .contact-form input {
+            width: calc(50% - 20px); /* Half width for two inputs */
+        }
+
+        .contact-form textarea {
+            width: calc(100% - 40px);
+            height: 150px;
+        }
+
+        .contact-form button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            background-color: #00bfff;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            animation: fadeInUp 1s ease-in-out;
+            animation-delay: 1s;
+        }
+
+        .contact-form button:hover {
+            background-color: #009acd;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-form input, .contact-form textarea {
+                width: calc(100% - 40px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">ADIL.</a>
+        </div>
+        <div class="nav-links">
+            <a href="main.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="skill.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="container">
+        <div class="contact-form">
+            <h1>Contact <span>Me!</span></h1>
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Mobile Number" required>
+                    <input type="text" placeholder="Email Subject" required>
+                </div>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
